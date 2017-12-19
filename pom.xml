@@ -13,6 +13,27 @@
             </resource>
             <resource>
                 <filtering>true</filtering>
+                <directory>services/AllTypesDBAutomation/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/MyJavaService/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
+                <directory>services/dafssf/src</directory>
+                <excludes>
+                    <exclude>**/*.java</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <filtering>true</filtering>
                 <directory>services/securityService/src</directory>
                 <excludes>
                     <exclude>**/*.java</exclude>
@@ -96,6 +117,9 @@
                         </goals>
                         <configuration>
                             <sources>
+                                <source>services/AllTypesDBAutomation/src</source>
+                                <source>services/MyJavaService/src</source>
+                                <source>services/dafssf/src</source>
                                 <source>services/securityService/src</source>
                             </sources>
                         </configuration>
@@ -264,6 +288,11 @@
             <version>2.5</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.38</version>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
@@ -296,6 +325,6 @@
         <profile.props.file>development.properties</profile.props.file>
         <spring.version>4.3.9.RELEASE</spring.version>
         <spring.security.version>4.1.2.RELEASE</spring.security.version>
-        <wavemaker.studio.version>9.1.0.3973</wavemaker.studio.version>
+        <wavemaker.studio.version>9.1.0.3978</wavemaker.studio.version>
     </properties>
 </project>

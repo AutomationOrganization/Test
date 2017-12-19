@@ -3,7 +3,14 @@
     <wm-top-nav name="topnav" content="topnav"></wm-top-nav>
     <wm-content name="content">
         <wm-left-panel columnwidth="2" name="leftpanel" content="leftnav"></wm-left-panel>
-        <wm-page-content columnwidth="8" paddingleft="15" paddingright="15" name="mainContent">
+        <wm-page-content padding="unset 15px" columnwidth="8" name="mainContent">
+            <wm-table filtermode="multicolumn" navigation="Basic" dataset="bind:Variables.AllTypesData.dataSet" title="All types List" name="AllTypesTable1">
+                <wm-table-column show="true" readonly="true" generator="identity" type="integer" edit-widget-type="number" primary-key="true" caption="Id" binding="id"></wm-table-column>
+                <wm-table-column readonly="false" show="true" generator="assigned" type="date" edit-widget-type="date" caption="Date Col" binding="dateCol"></wm-table-column>
+                <wm-table-column readonly="false" show="true" generator="assigned" type="time" edit-widget-type="time" caption="Time Col" binding="timeCol"></wm-table-column>
+                <wm-table-column readonly="false" show="true" generator="assigned" type="datetime" edit-widget-type="datetime" caption="Datetime Col" binding="datetimeCol"></wm-table-column>
+                <wm-table-column readonly="false" filterwidget="text" show="true" generator="assigned" type="timestamp" edit-widget-type="timestamp" caption="Timestamp Col" binding="timestampCol"></wm-table-column>
+            </wm-table>
         </wm-page-content>
         <wm-right-panel columnwidth="2" name="rightpanel" content="rightnav"></wm-right-panel>
     </wm-content>
